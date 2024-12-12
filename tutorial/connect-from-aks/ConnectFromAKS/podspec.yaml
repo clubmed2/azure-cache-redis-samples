@@ -5,10 +5,10 @@ metadata:
   labels:
     azure.workload.identity/use: "true"  # Required. Only pods with this label can use workload identity.
 spec:
-  serviceAccountName: workload-identity-sa
+  serviceAccountName: default
   containers:
   - name: entrademo-container
-    image: aaddemoacr.azurecr.io/connect-from-aks-demo:latest
+    image: hseungh.azurecr.io/connect-from-aks-demo:latest
 
     imagePullPolicy: Always
     command: ["dotnet", "ConnectFromAKS.dll"] 
@@ -27,5 +27,5 @@ spec:
          - name: REDIS_ACCESSKEY
            value: "your access key" 
          - name: REDIS_PORT
-           value: "6380" 
+           value: "6380"
   restartPolicy: Never
