@@ -8,7 +8,7 @@ spec:
   serviceAccountName: default
   containers:
   - name: entrademo-container
-    image: hseungh.azurecr.io/connect-from-aks-demo:v1
+    image: hseungh.azurecr.io/connect-from-aks-demo:1.0
 
     imagePullPolicy: Always
     command: ["dotnet", "ConnectFromAKS.dll"] 
